@@ -151,3 +151,14 @@ html {
 		clip-path: circle(150% at top right);
 	}
 }
+
+/* Text selection highlight colors */
+::selection {
+	background-color: #ff8c00;
+	color: #000;
+}
+
+.dark ::selection {
+	background-color: #00ffff;
+	color: #000;
+}
