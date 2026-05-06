@@ -1,0 +1,56 @@
+---
+title: 'Web Performance Tips'
+publishedAt: '2026-05-04'
+summary: 'Essential tips to improve your web application performance'
+---
+
+## Why Performance Matters
+
+Web performance is crucial for user experience and SEO. Slow websites lead to higher bounce rates and lower conversion rates.
+
+## Key Metrics
+
+- **First Contentful Paint (FCP)**: Time until first content appears
+- **Largest Contentful Paint (LCP)**: Time until largest content appears
+- **Cumulative Layout Shift (CLS)**: Visual stability of the page
+
+## Performance Tips
+
+### 1. Optimize Images
+
+Use modern image formats like WebP and serve responsive images:
+
+```jsx
+<Image
+  src="/image.webp"
+  alt="Description"
+  width={800}
+  height={600}
+/>
+```
+
+### 2. Code Splitting
+
+Split your code into smaller chunks:
+
+```jsx
+const Component = dynamic(() => import('./Component'));
+```
+
+### 3. Lazy Loading
+
+Load content only when needed:
+
+```jsx
+<img loading="lazy" src="image.jpg" />
+```
+
+## Tools for Measurement
+
+- Google Lighthouse
+- WebPageTest
+- Chrome DevTools
+
+## Conclusion
+
+Improving web performance is an ongoing process. Use these tips and tools to create faster, better web experiences!
