@@ -2,6 +2,19 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* Dark mode primary color override - MUST BE BEFORE @theme */
+html.dark {
+	--color-primary-100: #ccffff !important;
+	--color-primary-200: #99ffff !important;
+	--color-primary-300: #66ffff !important;
+	--color-primary-400: #33ffff !important;
+	--color-primary-500: #00ffff !important;
+	--color-primary-600: #00e6e6 !important;
+	--color-primary-700: #00cccc !important;
+	--color-primary-800: #00b3b3 !important;
+	--color-primary-900: #009999 !important;
+}
+
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
   so we've added these compatibility styles to make sure everything still
@@ -161,20 +174,4 @@ html {
 .dark ::selection {
 	background-color: #00ffff;
 	color: #000;
-}
-
-/* Dark mode primary color override */
-@layer base {
-	html.dark,
-	html:where(.dark) {
-		--color-primary-100: #ccffff !important;
-		--color-primary-200: #99ffff !important;
-		--color-primary-300: #66ffff !important;
-		--color-primary-400: #33ffff !important;
-		--color-primary-500: #00ffff !important;
-		--color-primary-600: #00e6e6 !important;
-		--color-primary-700: #00cccc !important;
-		--color-primary-800: #00b3b3 !important;
-		--color-primary-900: #009999 !important;
-	}
 }
