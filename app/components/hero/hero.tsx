@@ -10,13 +10,21 @@ import { GithubIcon } from '../layouts/icons/github-icon';
 import { LinkedinIcon } from '../layouts/icons/linkedin-icon';
 import { XIcon } from '../layouts/icons/x-icon';
 import LightRays from '../light-rays/LightRays';
+import Dither from '../dither/Dither';
 
 export default function Hero() {
 	const { theme, systemTheme } = useTheme();
 	const [mounted, setMounted] = useState(false);
+	const [isMobile, setIsMobile] = useState(false);
 
 	useEffect(() => {
 		setMounted(true);
+		const checkMobile = () => {
+			setIsMobile(window.innerWidth < 768);
+		};
+		checkMobile();
+		window.addEventListener('resize', checkMobile);
+		return () => window.removeEventListener('resize', checkMobile);
 	}, []);
 
 	// Get the current theme (resolved with system theme if using system preference)
@@ -27,7 +35,7 @@ export default function Hero() {
 
 	return (
 		<main className='relative min-h-svh w-screen overflow-hidden'>
-			{mounted && (
+			{mounted && !isMobile && (
 				<LightRays
 					raysOrigin='top-center'
 					raysColor={raysColor}
@@ -39,6 +47,21 @@ export default function Hero() {
 					noiseAmount={0.1}
 					distortion={0.05}
 				/>
+			)}
+			{mounted && isMobile && (
+				<div className='absolute inset-0 z-0'>
+					<Dither
+						waveSpeed={0.05}
+						waveFrequency={3}
+						waveAmplitude={0.3}
+						waveColor={currentTheme === 'light' ? [1, 0.55, 0] : [0, 1, 1]}
+						colorNum={8}
+						pixelSize={3}
+						disableAnimation={false}
+						enableMouseInteraction={false}
+						mouseRadius={1}
+					/>
+				</div>
 			)}
 			<div
 				className={classNames('relative min-h-svh', merryWeather.className)}
@@ -107,8 +130,8 @@ export default function Hero() {
 								className='flex flex-wrap space-x-3 space-y-1'
 								data-skip-splash-cursor
 							>
-								<Link href='/projects'>/projects</Link>
-								<Link href='/thoughts'>/thoughts</Link>
+								{/* <Link href='/projects'>/projects</Link>
+								<Link href='/thoughts'>/thoughts</Link> */}
 								<Link href='/uses'>/uses</Link>
 								<Link href='/stats'>/stats</Link>
 							</div>
