@@ -164,14 +164,16 @@ html {
 }
 
 /* Dark mode primary color override */
-.dark {
-	--color-primary-100: #ccffff;
-	--color-primary-200: #99ffff;
-	--color-primary-300: #66ffff;
-	--color-primary-400: #33ffff;
-	--color-primary-500: #00ffff;
-	--color-primary-600: #00e6e6;
-	--color-primary-700: #00cccc;
-	--color-primary-800: #00b3b3;
-	--color-primary-900: #009999;
+@layer base {
+	.dark {
+		--color-primary-100: #ccffff;
+		--color-primary-200: #99ffff;
+		--color-primary-300: #66ffff;
+		--color-primary-400: #33ffff;
+		--color-primary-500: #00ffff;
+		--color-primary-600: #00e6e6;
+		--color-primary-700: #00cccc;
+		--color-primary-800: #00b3b3;
+		--color-primary-900: #009999;
+	}
 }
