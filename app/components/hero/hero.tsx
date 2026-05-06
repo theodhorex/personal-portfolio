@@ -51,11 +51,11 @@ export default function Hero() {
 			{mounted && isMobile && (
 				<div className='absolute inset-0 z-0'>
 					<Dither
-						waveSpeed={0.05}
-						waveFrequency={3}
-						waveAmplitude={0.3}
-						waveColor={currentTheme === 'light' ? [1, 0.55, 0] : [0, 1, 1]}
-						colorNum={8}
+						waveSpeed={0.5}
+						waveFrequency={10}
+						waveAmplitude={0.5}
+						waveColor={currentTheme === 'light' ? [0.95, 0.95, 0.85] : [0, 0.35, 0.35]}
+						colorNum={40}
 						pixelSize={3}
 						disableAnimation={false}
 						enableMouseInteraction={false}
