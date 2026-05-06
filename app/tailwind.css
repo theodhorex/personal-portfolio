@@ -28,32 +28,6 @@ html.dark {
 	--color-primary-900: #009999;
 }
 
-@layer theme {
-	:root {
-		--color-primary-100: #ffe4cc;
-		--color-primary-200: #ffd9b3;
-		--color-primary-300: #ffce99;
-		--color-primary-400: #ffc380;
-		--color-primary-500: #ff8c00;
-		--color-primary-600: #e67e00;
-		--color-primary-700: #cc7000;
-		--color-primary-800: #b36200;
-		--color-primary-900: #995400;
-	}
-
-	html.dark {
-		--color-primary-100: #ccffff;
-		--color-primary-200: #99ffff;
-		--color-primary-300: #66ffff;
-		--color-primary-400: #33ffff;
-		--color-primary-500: #00ffff;
-		--color-primary-600: #00e6e6;
-		--color-primary-700: #00cccc;
-		--color-primary-800: #00b3b3;
-		--color-primary-900: #009999;
-	}
-}
-
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
   so we've added these compatibility styles to make sure everything still
@@ -73,6 +47,16 @@ html.dark {
 }
 
 @theme inline {
+	--color-primary-100: #ffe4cc;
+	--color-primary-200: #ffd9b3;
+	--color-primary-300: #ffce99;
+	--color-primary-400: #ffc380;
+	--color-primary-500: #ff8c00;
+	--color-primary-600: #e67e00;
+	--color-primary-700: #cc7000;
+	--color-primary-800: #b36200;
+	--color-primary-900: #995400;
+
 	--animate-first: moveVertical 30s ease infinite;
 	--animate-second: moveInCircle 20s reverse infinite;
 	--animate-third: moveInCircle 40s linear infinite;
