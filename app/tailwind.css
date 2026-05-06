@@ -21,15 +21,15 @@
 }
 
 @theme inline {
-	--color-primary-100: #fdd1d9;
-	--color-primary-200: #fba4bc;
-	--color-primary-300: #f575a5;
-	--color-primary-400: #eb519b;
-	--color-primary-500: #de1d8d;
-	--color-primary-600: #be1588;
-	--color-primary-700: #9f0e7f;
-	--color-primary-800: #800972;
-	--color-primary-900: #6a0568;
+	--color-primary-100: #ffe4cc;
+	--color-primary-200: #ffd9b3;
+	--color-primary-300: #ffce99;
+	--color-primary-400: #ffc380;
+	--color-primary-500: #ff8c00;
+	--color-primary-600: #e67e00;
+	--color-primary-700: #cc7000;
+	--color-primary-800: #b36200;
+	--color-primary-900: #995400;
 
 	--animate-first: moveVertical 30s ease infinite;
 	--animate-second: moveInCircle 20s reverse infinite;
@@ -161,4 +161,17 @@ html {
 .dark ::selection {
 	background-color: #00ffff;
 	color: #000;
+}
+
+/* Dark mode primary color override */
+.dark {
+	--color-primary-100: #ccffff;
+	--color-primary-200: #99ffff;
+	--color-primary-300: #66ffff;
+	--color-primary-400: #33ffff;
+	--color-primary-500: #00ffff;
+	--color-primary-600: #00e6e6;
+	--color-primary-700: #00cccc;
+	--color-primary-800: #00b3b3;
+	--color-primary-900: #009999;
 }
