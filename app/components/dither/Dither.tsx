@@ -141,19 +141,18 @@ class RetroEffectImpl extends Effect {
       ['pixelSize', new THREE.Uniform(2.0)]
     ]);
     super('RetroEffect', ditherFragmentShader, { uniforms });
-    this.uniforms = uniforms;
   }
   set colorNum(v) {
-    this.uniforms.get('colorNum').value = v;
+    (this.uniforms as Map<string, THREE.Uniform>).get('colorNum')!.value = v;
   }
   get colorNum() {
-    return this.uniforms.get('colorNum').value;
+    return (this.uniforms as Map<string, THREE.Uniform>).get('colorNum')!.value;
   }
   set pixelSize(v) {
-    this.uniforms.get('pixelSize').value = v;
+    (this.uniforms as Map<string, THREE.Uniform>).get('pixelSize')!.value = v;
   }
   get pixelSize() {
-    return this.uniforms.get('pixelSize').value;
+    return (this.uniforms as Map<string, THREE.Uniform>).get('pixelSize')!.value;
   }
 }
 
